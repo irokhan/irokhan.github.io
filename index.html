@@ -6,92 +6,40 @@
   <meta name="description" content="Build your necropolis, raise a skeleton army, and lead it on raids.">
   <meta name="theme-color" content="#15121d">
   <title>Necropolia Rush · Irokhan</title>
+  <link rel="stylesheet" href="styles.css">
   <script src="languages.js" defer></script>
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      min-height: 100svh;
-      margin: 0;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      color: #f5ead8;
-      background: radial-gradient(ellipse at 50% 36%, #36224b 0, #15121d 63%);
-      font: 1rem/1.6 system-ui, sans-serif;
-      text-align: center;
-    }
-
-    header {
-      min-height: 4.5rem;
-      padding: 1rem clamp(1.5rem, 6vw, 6rem);
-      text-align: end;
-    }
-
-    label { margin-inline-end: .5rem; }
-
-    select {
-      max-width: 100%;
-      min-height: 2.75rem;
-      padding: .35rem .65rem;
-      color: inherit;
-      background: #21192e;
-      border: 1px solid #7f6396;
-      border-radius: .4rem;
-      font: inherit;
-    }
-
-    select:focus-visible { outline: 2px solid #e0aafa; }
-
-    main {
-      display: grid;
-      align-content: center;
-      justify-items: center;
-      padding: clamp(3rem, 10vh, 7rem) 1.5rem;
-    }
-
-    h1 {
-      width: min(100%, 40.625rem);
-      margin: 0 0 2rem;
-    }
-
-    h1 img {
-      display: block;
-      width: 100%;
-      height: auto;
-      image-rendering: pixelated;
-    }
-
-    p {
-      max-width: 36ch;
-      margin: 0;
-      text-wrap: balance;
-    }
-
-    .intro {
-      font-family: Georgia, serif;
-      font-size: clamp(1.55rem, 5vw, 2.5rem);
-      line-height: 1.25;
-    }
-
-    footer {
-      margin-inline: clamp(1.5rem, 6vw, 6rem);
-      padding: 1.5rem 0;
-      border-top: 1px solid #44354f;
-      color: #d6c4de;
-    }
-  </style>
 </head>
 <body>
-  <header>
+  <header class="site-header">
+    <a class="brand" href="./">Irokhan</a>
     <div id="language-controls" hidden>
       <label for="language" id="language-label">Language</label>
       <select id="language"></select>
     </div>
   </header>
-  <main>
-    <h1><img src="necropolia-rush.png" width="650" height="270" alt="Necropolia Rush"></h1>
-    <p class="intro" id="intro">Build your necropolis, raise a skeleton army, and lead it on raids.</p>
+  <main class="home">
+    <div class="hero">
+      <h1><img src="necropolia-rush.png" width="325" height="135" alt="Necropolia Rush"></h1>
+      <p class="intro" id="intro">Build your necropolis, raise a skeleton army, and lead it on raids.</p>
+      <div class="platforms">
+        <span class="platform"><img src="screens/app-store.png" width="25" height="25" alt="">App Store</span>
+        <span class="platform"><img src="screens/google-play.png" width="23" height="25" alt="">Google Play</span>
+      </div>
+      <p class="release-status" id="release-status">In beta</p>
+    </div>
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Screenshots</h2>
+      <ul id="screenshots" tabindex="0" aria-labelledby="gallery-title" hidden>
+        <li><img width="576" height="1024" decoding="async" alt="A skeleton army on a raid"></li>
+        <li><img width="576" height="1024" decoding="async" alt="The necropolis"></li>
+        <li><img width="576" height="1024" decoding="async" alt="A boss fight"></li>
+        <li><img width="576" height="1024" decoding="async" alt="The tavern"></li>
+      </ul>
+      <noscript><p class="fallback">Enable JavaScript to see localized screenshots.</p></noscript>
+    </section>
   </main>
-  <footer>Irokhan</footer>
+  <footer class="site-footer">
+    <a id="privacy-link" href="privacy.html">Privacy policy</a>
+  </footer>
 </body>
 </html>
