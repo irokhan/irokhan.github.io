@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#15121d">
   <title>Necropolia Rush · Irokhan</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="carousel.js" defer></script>
   <script src="languages.js" defer></script>
 </head>
 <body>
@@ -27,15 +28,20 @@
       </div>
       <p class="release-status" id="release-status">In beta</p>
     </div>
-    <section class="gallery" aria-labelledby="gallery-title">
-      <h2 id="gallery-title">Screenshots</h2>
-      <ul id="screenshots" tabindex="0" aria-labelledby="gallery-title" hidden>
-        <li><img width="576" height="1024" decoding="async" alt="A skeleton army on a raid"></li>
-        <li><img width="576" height="1024" decoding="async" alt="The necropolis"></li>
-        <li><img width="576" height="1024" decoding="async" alt="A boss fight"></li>
-        <li><img width="576" height="1024" decoding="async" alt="The tavern"></li>
-      </ul>
-      <noscript><p class="fallback">Enable JavaScript to see localized screenshots.</p></noscript>
+    <section class="gallery" id="carousel" aria-label="Screenshots" hidden>
+      <div class="carousel-viewport" id="screenshots"></div>
+      <div class="carousel-controls">
+        <button class="carousel-button" id="carousel-prev" type="button" aria-label="Previous">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+        <button class="carousel-button" id="carousel-next" type="button" aria-label="Next">
+          <span aria-hidden="true">›</span>
+        </button>
+        <button class="carousel-button carousel-rotation" id="carousel-play" type="button" aria-label="Pause autoplay">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
     </section>
   </main>
   <footer class="site-footer">
