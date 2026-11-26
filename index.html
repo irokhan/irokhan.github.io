@@ -6,9 +6,9 @@
   <meta name="description" content="Build your necropolis, raise a skeleton army, and lead it on raids.">
   <meta name="theme-color" content="#15121d">
   <title>Necropolia Rush · Irokhan</title>
-  <link rel="stylesheet" href="styles.css?v=carousel">
+  <link rel="stylesheet" href="styles.css?v=trailer">
   <script src="carousel.js" defer></script>
-  <script src="languages.js?v=carousel" defer></script>
+  <script src="languages.js?v=trailer" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -19,14 +19,26 @@
     </div>
   </header>
   <main class="home">
-    <div class="hero">
-      <h1><img src="necropolia-rush.png" width="325" height="135" alt="Necropolia Rush"></h1>
-      <p class="intro" id="intro">Build your necropolis, raise a skeleton army, and lead it on raids.</p>
-      <div class="platforms">
-        <span class="platform"><img src="screens/app-store.png" width="25" height="25" alt="">App Store</span>
-        <span class="platform"><img src="screens/google-play.png" width="23" height="25" alt="">Google Play</span>
+    <div class="showcase">
+      <div class="hero">
+        <h1><img src="necropolia-rush.png" width="325" height="135" alt="Necropolia Rush"></h1>
+        <p class="intro" id="intro">Build your necropolis, raise a skeleton army, and lead it on raids.</p>
+        <div class="platforms">
+          <span class="platform"><img src="screens/app-store.png" width="25" height="25" alt="">App Store</span>
+          <span class="platform"><img src="screens/google-play.png" width="23" height="25" alt="">Google Play</span>
+        </div>
+        <p class="release-status" id="release-status">In beta</p>
       </div>
-      <p class="release-status" id="release-status">In beta</p>
+      <figure class="trailer">
+        <video id="gameplay" controls playsinline preload="none" poster="gameplay-poster.jpg"
+               width="720" height="1280" aria-labelledby="trailer-label">
+          <source src="gameplay-en.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          <span id="trailer-label">Gameplay (English)</span>
+          <a href="https://www.youtube.com/shorts/objVRK7YWBU">YouTube</a>
+        </figcaption>
+      </figure>
     </div>
     <section class="gallery" id="carousel" aria-label="Screenshots" hidden>
       <div class="carousel-viewport" id="screenshots"></div>
